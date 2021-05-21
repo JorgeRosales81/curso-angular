@@ -1,0 +1,22 @@
+<div class="container">
+
+    <div class="login-form" [formGroup]="formLogin">
+
+        <mat-form-field>
+            <mat-label>User</mat-label>
+            <input matInput placeholder="User Name" formControlName="username">
+            <mat-error *ngIf="formLogin.get('username')?.errors?.email && !formLogin.get('username')?.errors?.required">
+                Ingresa un email valido
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="type your Password" type="password" formControlName="password">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (Click)="login()" [disabled]="formLogin.invalid">Login</button>
+
+    </div>
+
+</div>
