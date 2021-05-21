@@ -7,4 +7,12 @@ import {MatToolbarModule}  from '@angular/material/toolbar'
 })
 export class AppComponent {
   title = 'curso-angular';
+  showBar = false;
+
+  constructor(private dataService: ){
+    this.dataService.is<loading>.susbscribe({
+      this.showBar = isLoading 
+    });
+  }
+
 }

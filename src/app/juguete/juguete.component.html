@@ -1,0 +1,29 @@
+<p>juguete works!</p>
+<div class="container">
+    <div class="juguete-form" [formGroup] = "formJuguete">
+        <mat-form-field>
+            <mat-label>Usuario</mat-label>
+            <input matInput placeholder="Nombre de juguete" formControlName="nombreJuguete">
+            <mat-error *ngIf="!formContact.get('nombreJuguete')?.errors?.required">
+                Ingresa un nombre de juguete valido
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>eMail</mat-label>
+            <input matInput placeholder="capture el tipo de juguete" formControlName="tipoJuguete">
+            <mat-error *ngIf="!formContact.get('tipoJuguete')?.errors?.required">
+                Ingresa un tipo valido de  juguete
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Mensaje</mat-label>
+            <input matInput placeholder="Capture la marca" formControlName="marcaJuguete">
+            <mat-error *ngIf="!formContact.get('marcaJuguete')?.errors?.required">
+                Ingresa un comentario valido
+            </mat-error>
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" (click)="saveJuguete()" [disabled]="formJuguete.invalid">Enviar</button>
+        
+    </div>
+</div>

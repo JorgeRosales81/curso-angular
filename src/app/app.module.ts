@@ -11,12 +11,22 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { JugueteComponent } from './juguete/juguete.component';
+import {MatTableModule} from '@angular/material/table';
+import { ToyComponent } from './toy/toy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    HomeComponent,
+    JugueteComponent,
+    ToyComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +36,11 @@ import { ContactComponent } from './contact/contact.component';
     MatToolbarModule,
     MatIconModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    MatProgressBarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
